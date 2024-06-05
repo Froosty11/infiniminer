@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/infiniminer.iml" filepath="$PROJECT_DIR$/.idea/infiniminer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/infiniminer.main.iml" filepath="$PROJECT_DIR$/.idea/modules/infiniminer.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/infiniminer.test.iml" filepath="$PROJECT_DIR$/.idea/modules/infiniminer.test.iml" />
     </modules>
   </component>
 </project>
