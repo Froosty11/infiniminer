@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class Infiniminer {
+package org.gobbos.infiniminer;
+
+public class Infiniminer {
 }

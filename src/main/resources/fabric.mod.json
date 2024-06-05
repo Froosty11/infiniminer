@@ -2,25 +2,29 @@
   "schemaVersion": 1,
   "id": "infiniminer",
   "version": "${version}",
-
   "name": "infiniminer",
   "description": "",
   "authors": [],
-  "contact": {},
-
+  "contact": {
+    "repo": "https://github.com/edvin/untitled"
+  },
   "license": "All-Rights-Reserved",
   "icon": "assets/infiniminer/icon.png",
-
   "environment": "*",
-  "entrypoints": {},
-
-      "mixins": [
-        "infiniminer.mixins.json"
-      ],
-
+  "entrypoints": {
+    "client": [
+      "org.gobbos.infiniminer.client.InfiniminerClient"
+    ],
+    "main": [
+      "org.gobbos.infiniminer.Infiniminer"
+    ]
+  },
+  "mixins": [
+    "infiniminer.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=${loader_version}",
-        "fabric": "*",
+    "fabric": "*",
     "minecraft": "${minecraft_version}"
   }
 }

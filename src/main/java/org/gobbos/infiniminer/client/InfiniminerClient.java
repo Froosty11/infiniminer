@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class InfiniminerClient {
+package org.gobbos.infiniminer.client;
+
+public class InfiniminerClient {
 }
