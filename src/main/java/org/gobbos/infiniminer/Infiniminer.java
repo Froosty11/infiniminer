@@ -22,8 +22,8 @@ public class Infiniminer implements ModInitializer {
                                             final String value1 = StringArgumentType.getString(context, "value1");
                                             final String value2 = StringArgumentType.getString(context, "value2");
 
-                                            context.getSource().sendFeedback(() -> Text.literal("Called /gpt with arguments " +  value1 + " and "+ value2), false);
-                                            System.out.println(bridger.makePostRequest(value1,value2));
+                                            //context.getSource().sendFeedback(() -> Text.literal("Called /gpt with arguments " +  value1 + " and "+ value2), false);
+                                            context.getSource().sendFeedback(() -> Text.literal(bridger.makePostRequest(value1,value2)), false);
                                             return 1;
                                         })
                                 )
