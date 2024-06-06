@@ -25,13 +25,16 @@ public class BridgeClass {
             // Set the request method to POST
             conn.setRequestMethod("POST");
             conn.setRequestProperty("Content-Type", "application/json");
-            conn.setRequestProperty("Authorization", "Bearer ");
+            conn.setRequestProperty("Authorization", "Bearer");
 
             // Enable input and output streams
             conn.setDoOutput(true);
             //I am making a Minecraft mod. This mod will allow you to give me the result of merging two items together. Examples: WATER + FIRE RESULT: STEAM // STEAM + WOODEN_PICKAXE RESULT: MOIST_PICKAXE. Now, I need you to give me the result of merging two items together. I want you to merge "OBSIDIAN" and "PICKAXE" together. Return the result in quotation marks.
             // Write the body of the POST request
-            String jsonInputString = "{\"inputs\": \"<|begin_of_text|><|start_header_id|>user<|end_header_id|>I am making a Minecraft mod. This mod will allow you to give me the result of merging two items together. Examples: WATER + FIRE RESULT: STEAM // STEAM + WOODEN_PICKAXE RESULT: MOIST_PICKAXE. Now, I need you to give me the result of merging two items together. Return ONLY the following format: INPUT: \\\"" + v1 + "\\\" + \\\"" + v2 +"\\\"<|eot_id|><|start_header_id|>assistant<|end_header_id|>\"}";
+            //String jsonInputString = "{\"inputs\": \"<|begin_of_text|><|start_header_id|>user<|end_header_id|>I am making a Minecraft mod. This mod will allow you to give me the result of merging two items together. Examples: WATER + FIRE RESULT: STEAM // STEAM + WOODEN_PICKAXE RESULT: MOIST_PICKAXE. Now, I need you to give me the result of merging two items together. Return ONLY the following format: INPUT: \\\"" + v1 + "\\\" + \\\"" + v2 +"\\\"<|eot_id|><|start_header_id|>assistant<|end_header_id|>\"}";
+
+            String jsonInputString = "{\"inputs\": \"<|begin_of_text|><|start_header_id|>user<|end_header_id|>Merge two items together to create a new or existing concept Examples: WATER + FIRE RESULT: STEAM // STEAM + WOODEN_PICKAXE RESULT: MOIST_PICKAXE. Return ONLY the format INPUT <ITEM1> + <ITEM2> RESULT: <OUTPUT>  Here the items you need to merge: INPUT: \\\"" + v1 + "\\\" + \\\"" + v2 +"\\\"<|eot_id|><|start_header_id|>assistant<|end_header_id|>\"}";
+
             //String jsonInputString = "{\"inputs\": \"I am making a Minecraft mod. This mod will allow you to give me the result of merging two items together. Examples: WATER + FIRE RESULT: STEAM // STEAM + WOODEN_PICKAXE RESULT: MOIST_PICKAXE. Now, I need you to give me the result of merging two items together. Return ONLY the following format: INPUT: \\\"OBSIDIAN\\\" + \\\"PICKAXE\\\" \"}";
             try (OutputStream os = conn.getOutputStream()) {
                 byte[] input = jsonInputString.getBytes("utf-8");
